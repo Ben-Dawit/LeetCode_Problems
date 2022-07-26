@@ -1,0 +1,20 @@
+//solution in java
+
+class Solution {
+    public int minPartitions(String n) {
+        
+        char largestInt = '0';
+        char[] characterArrayN=n.toCharArray(); //converts the string to an array of characters that are exactly the same as the string.  
+        for(int i = 0; i < n.length(); i++){
+             
+            if(characterArrayN[i] > largestInt){
+                largestInt = characterArrayN[i];
+            }
+            
+        }
+        String resultString = Character.toString(largestInt);
+        int result = Integer.parseInt(resultString);
+        return result;
+        
+    }
+}
